@@ -1,4 +1,11 @@
-```markdown
+---
+title: BLE DoS Attack Cheatsheet - Quick Reference
+tags: [BLE, DoS, cheatsheet, header-fields, opcodes, quick-reference]
+category: BLE Security
+parent: "[[BLE/DoS/README]]"
+status: complete
+---
+
 # BLE Protocol Headers Reference for DoS Testing
 ## Quick Reference Cheat-Sheet for Packet Crafting
 
@@ -602,3 +609,13 @@ This reference provides:
 ```
 
 This structured README provides comprehensive tables for all BLE protocol layers with their exploitable fields, attack mappings, and quick reference information. Use it as your primary guide when implementing DoS attacks!
+
+
+---
+
+**Related**:
+- [[BLE/DoS/README|DoS Overview]]
+- [[BLE/DoS/01-dos-attack-theory|DoS Theory & Analysis]]
+- [[BLE/01-protocol-overview|Protocol Overview]]
+- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+- [[BLE/README|BLE Home]]

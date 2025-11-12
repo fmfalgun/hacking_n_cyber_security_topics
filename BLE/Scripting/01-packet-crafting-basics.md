@@ -1,4 +1,11 @@
-I'll create a comprehensive README that teaches BLE packet crafting in both Python and C++, focused on your DoS research needs.
+---
+title: BLE Packet Crafting Basics - Python & C++
+tags: [BLE, packet-crafting, python, cpp, binary-data, struct, scapy]
+category: BLE Security
+parent: "[[BLE/Scripting/README]]"
+status: complete
+---
+
 
 ```markdown
 # BLE Packet Crafting Mastery Guide
@@ -1840,3 +1847,13 @@ You now have:
 ```
 
 This comprehensive guide covers everything needed to craft BLE packets at the binary level in both Python and C++. Use it as your reference when implementing attacks for your dataset generation!
+
+
+---
+
+**Related**:
+- [[BLE/Scripting/README|Scripting Overview]]
+- [[BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]]
+- [[BLE/01-protocol-overview|Protocol Overview]]
+- [[BLE/DoS/01-dos-attack-theory|DoS Theory]]
+- [[BLE/README|BLE Home]]

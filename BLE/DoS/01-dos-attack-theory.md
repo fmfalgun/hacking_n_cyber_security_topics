@@ -1,5 +1,15 @@
-# Comprehensive BLE Attack Implementation Guide
-## From Protocol Fundamentals to DoS Dataset Generation
+---
+title: BLE DoS Attack Theory & Analysis
+tags: [BLE, DoS, attack-analysis, vulnerability-research, exploitation]
+category: BLE Security
+parent: "[[BLE/DoS/README]]"
+status: complete
+---
+
+# BLE DoS Attack Theory & Analysis
+
+> **Purpose**: Comprehensive analysis of Denial of Service attack vectors across all BLE protocol layers, including exploitation mechanics, hardware requirements, and implementation approaches.
+
 
 > **Audience:** Security researchers with basic BLE stack knowledge (PHY → LL → L2CAP → ATT/GATT/SMP) who want to implement attacks for security testing and ML model training.
 
@@ -3371,3 +3381,13 @@ This comprehensive guide covers:
 5. Expand to nRF52840 for advanced attacks
 
 **Questions? Need full code for specific attack? Ready to dive in!** 🚀
+
+
+---
+
+**Related**:
+- [[BLE/DoS/README|DoS Overview]]
+- [[BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
+- [[BLE/01-protocol-overview|Protocol Overview]]
+- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+- [[BLE/README|BLE Home]]

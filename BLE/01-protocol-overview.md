@@ -1,6 +1,15 @@
-Perfect! Let me give you the comprehensive BLE deep dive. This will be detailed, so buckle up! 🚀
-
 ---
+title: BLE Protocol Overview - Complete Stack Breakdown
+tags: [BLE, protocol-analysis, PHY, link-layer, L2CAP, ATT, GATT, SMP, HCI]
+category: BLE Security
+parent: "[[BLE/README]]"
+status: complete
+---
+
+# BLE Protocol Overview - Complete Stack Breakdown
+
+> **Purpose**: Comprehensive technical breakdown of all BLE protocol layers from Physical (PHY) to Application (GATT), including packet structures, connection flows, and attack surfaces.
+
 
 # **BLUETOOTH LOW ENERGY (BLE) - COMPLETE PROTOCOL BREAKDOWN**
 
@@ -829,3 +838,12 @@ Alright, that's the comprehensive BLE breakdown!
 5. Explain LoRa or Zigbee next?
 
 What's your next move? 🎯
+
+
+---
+
+**Related**:
+- [[BLE/README|BLE Home]]
+- [[BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
+- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics]]
+- [[README|Home]] • [[INDEX|Full Index]]
