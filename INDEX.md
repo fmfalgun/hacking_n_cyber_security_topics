@@ -66,14 +66,17 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 
 [[WiFi/README|→ WiFi Research Hub]]
 
-**Coverage**:
-- [[WiFi/README|Complete Protocol Analysis]] (802.11b through WiFi 7)
+**Core Documentation**:
+- [[WiFi/README|WiFi Home & Overview]]
+- [[WiFi/01-protocol-overview|Complete Protocol Breakdown (Practical Focus)]] - PHY, MAC, OFDM, WPA2 4-way handshake
+- [[WiFi/02-protocol-overview|Protocol Reference & Comparison]] - Cross-protocol comparison, frame type cheat sheet
+
+**Attack Categories**:
 - [[WiFi/DoS/README|DoS Attacks]] (deauth, disassoc, beacon flooding, CTS flooding)
 - [[WiFi/MITM/README|MITM Attacks]] (evil twin, rogue AP, karma attacks)
 - [[WiFi/Injection/README|Injection Attacks]] (frame injection, fuzzing)
 - [[WiFi/Sniffing/README|Sniffing Techniques]] (monitor mode, channel hopping)
 - [[WiFi/Scripting/README|Packet Crafting]] (Scapy, Python)
-- WPA/WPA2/WPA3 security analysis
 
 ---
 
@@ -82,15 +85,16 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 
 [[Zigbee/README|→ Zigbee Research Hub]]
 
-**Coverage**:
-- [[Zigbee/README|Complete Protocol Analysis]] (802.15.4 PHY/MAC, Zigbee stack APL → PHY)
+**Core Documentation**:
+- [[Zigbee/README|Zigbee Home & Overview]]
+- [[Zigbee/01-protocol-overview|Complete Protocol Breakdown]] - PHY, MAC, NWK, APS, ZCL layers, mesh networking
+
+**Attack Categories**:
 - [[Zigbee/DoS/README|DoS Attacks]] (RF jamming, beacon flooding, ACK spoofing)
 - [[Zigbee/MITM/README|MITM Attacks]] (malicious coordinator, key interception, touchlink)
 - [[Zigbee/Injection/README|Injection Attacks]] (ZCL commands, replay attacks, OTA hijacking)
 - [[Zigbee/Sniffing/README|Sniffing Techniques]] (KillerBee, network discovery)
 - [[Zigbee/Scripting/README|Packet Crafting]] (KillerBee, Scapy)
-- Security mechanisms (AES-128-CCM, key types)
-- Industrial IoT focus
 
 ---
 
@@ -99,15 +103,16 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 
 [[LoRa/README|→ LoRa Research Hub]]
 
-**Coverage**:
-- [[LoRa/README|Complete Protocol Analysis]] (LoRa PHY CSS, LoRaWAN MAC)
+**Core Documentation**:
+- [[LoRa/README|LoRa Home & Overview]]
+- [[LoRa/01-protocol-overview|Complete Protocol Breakdown]] - CSS modulation, spreading factors, Classes A/B/C, OTAA/ABP
+
+**Attack Categories**:
 - [[LoRa/DoS/README|DoS Attacks]] (RF jamming, join request flooding, collision attacks)
 - [[LoRa/MITM/README|MITM Attacks]] (rogue gateway, join accept manipulation, wormhole)
 - [[LoRa/Injection/README|Injection Attacks]] (uplink/downlink injection, MAC commands, fuzzing)
 - [[LoRa/Sniffing/README|Sniffing Techniques]] (SDR, gr-lora, multi-SF reception)
 - [[LoRa/Scripting/README|Packet Crafting]] (GNU Radio, Arduino-LMIC, Python)
-- OTAA/ABP security (AES-128, MIC calculation)
-- Both frequency bands (868 MHz EU, 915 MHz US)
 
 ---
 
