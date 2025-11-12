@@ -14,6 +14,10 @@ parent: "[[README]]"
 ## Quick Navigation
 
 - [[README|🏠 Home]]
+- [[Bluetooth/README|📡 Bluetooth]] (Classic + BLE)
+- [[WiFi/README|📶 WiFi]] (✅ Complete)
+- [[Zigbee/README|🏠 Zigbee]] (✅ Complete)
+- [[LoRa/README|📻 LoRa]] (✅ Complete)
 - [[Lab-Setup/README|⚙️ Lab Setup]]
 - [[Traffic-Capture/README|📊 Traffic Capture]]
 - [[Dataset-Organization/README|🗂️ Dataset Organization]]
@@ -23,64 +27,87 @@ parent: "[[README]]"
 
 ## 📡 Wireless Protocols
 
-### Bluetooth Low Energy (BLE)
+### 1. Bluetooth
+[[Bluetooth/README|→ Bluetooth Research Hub]]
+
+Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Energy (BLE)**.
+
+#### A. Bluetooth Low Energy (BLE)
 **Status**: ✅ Active Research | **Progress**: DoS Implementation Phase
 
-#### Core Documentation
-- [[BLE/README|BLE Home & Overview]]
-- [[BLE/01-protocol-overview|Complete Protocol Breakdown]] (PHY, LL, L2CAP, ATT, GATT, SMP)
+**Core Documentation**:
+- [[Bluetooth/BLE/README|BLE Home & Overview]]
+- [[Bluetooth/BLE/01-protocol-overview|Complete Protocol Breakdown]] (PHY, LL, L2CAP, ATT, GATT, SMP)
 
-#### Attack Categories
+**Attack Categories**:
 
-##### Denial of Service (DoS)
-- [[BLE/DoS/README|DoS Overview & Matrix]]
-- [[BLE/DoS/01-dos-attack-theory|DoS Attack Theory & Analysis]] (35k+ lines)
-- [[BLE/DoS/02-dos-implementation-guide|Implementation Guide]] (Coming Soon)
-- [[BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
+- **DoS Attacks**: [[Bluetooth/BLE/DoS/README|Overview]] • [[Bluetooth/BLE/DoS/01-dos-attack-theory|Theory (35k+ lines)]] • [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Cheatsheet]]
+- **MITM Attacks**: [[Bluetooth/BLE/MITM/README|Overview]]
+- **Injection Attacks**: [[Bluetooth/BLE/Injection/README|Overview]]
+- **Sniffing**: [[Bluetooth/BLE/Sniffing/README|Overview]]
 
-##### Man-in-the-Middle (MITM)
-- [[BLE/MITM/README|MITM Attacks Overview]]
+**Implementation**: [[Bluetooth/BLE/Scripting/README|Scripting]] • [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting (Python & C++)]]
 
-##### Injection Attacks
-- [[BLE/Injection/README|Injection Attacks Overview]]
+#### B. Bluetooth Classic (BR/EDR)
+**Status**: 📋 Planned | **Progress**: After WiFi
 
-##### Sniffing & Reconnaissance
-- [[BLE/Sniffing/README|Sniffing Overview]]
+**Planned Coverage**:
+- [[Bluetooth/Classic/README|Bluetooth Classic Overview]]
+- BlueBorne, KNOB, BIAS attacks
+- A2DP, RFCOMM, SPP exploitation
+- Pairing attacks and SDP enumeration
 
-#### Implementation & Scripting
-- [[BLE/Scripting/README|Scripting Overview]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics (Python & C++)]]
-
----
-
-### WiFi (802.11)
-**Status**: 📋 Planned | **Progress**: Coming After BLE
-
-- [[WiFi/README|WiFi Overview]]
-- Protocol analysis (802.11 a/b/g/n/ac/ax)
-- DoS attacks (deauth, disassoc, beacon flooding)
-- MITM attacks (evil twin, rogue AP)
-- WPA2/WPA3 security analysis
+**Attack Categories**: DoS, MITM, Injection, Sniffing, Scripting (all planned)
 
 ---
 
-### Zigbee (IEEE 802.15.4)
-**Status**: 📋 Planned | **Progress**: Coming After WiFi
+### 2. WiFi (802.11)
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
 
-- [[Zigbee/README|Zigbee Overview]]
-- Protocol analysis (802.15.4 PHY/MAC, Zigbee network layer)
-- IoT device security
-- Key extraction and replay attacks
+[[WiFi/README|→ WiFi Research Hub]]
+
+**Coverage**:
+- [[WiFi/README|Complete Protocol Analysis]] (802.11b through WiFi 7)
+- [[WiFi/DoS/README|DoS Attacks]] (deauth, disassoc, beacon flooding, CTS flooding)
+- [[WiFi/MITM/README|MITM Attacks]] (evil twin, rogue AP, karma attacks)
+- [[WiFi/Injection/README|Injection Attacks]] (frame injection, fuzzing)
+- [[WiFi/Sniffing/README|Sniffing Techniques]] (monitor mode, channel hopping)
+- [[WiFi/Scripting/README|Packet Crafting]] (Scapy, Python)
+- WPA/WPA2/WPA3 security analysis
 
 ---
 
-### NFC (Near Field Communication)
-**Status**: 📋 Planned | **Progress**: Future
+### 3. Zigbee (IEEE 802.15.4)
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
 
-- [[NFC/README|NFC Overview]]
-- ISO/IEC 14443 and 18092 protocols
-- Contactless payment security
-- Relay attacks and cloning
+[[Zigbee/README|→ Zigbee Research Hub]]
+
+**Coverage**:
+- [[Zigbee/README|Complete Protocol Analysis]] (802.15.4 PHY/MAC, Zigbee stack APL → PHY)
+- [[Zigbee/DoS/README|DoS Attacks]] (RF jamming, beacon flooding, ACK spoofing)
+- [[Zigbee/MITM/README|MITM Attacks]] (malicious coordinator, key interception, touchlink)
+- [[Zigbee/Injection/README|Injection Attacks]] (ZCL commands, replay attacks, OTA hijacking)
+- [[Zigbee/Sniffing/README|Sniffing Techniques]] (KillerBee, network discovery)
+- [[Zigbee/Scripting/README|Packet Crafting]] (KillerBee, Scapy)
+- Security mechanisms (AES-128-CCM, key types)
+- Industrial IoT focus
+
+---
+
+### 4. LoRa/LoRaWAN
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
+
+[[LoRa/README|→ LoRa Research Hub]]
+
+**Coverage**:
+- [[LoRa/README|Complete Protocol Analysis]] (LoRa PHY CSS, LoRaWAN MAC)
+- [[LoRa/DoS/README|DoS Attacks]] (RF jamming, join request flooding, collision attacks)
+- [[LoRa/MITM/README|MITM Attacks]] (rogue gateway, join accept manipulation, wormhole)
+- [[LoRa/Injection/README|Injection Attacks]] (uplink/downlink injection, MAC commands, fuzzing)
+- [[LoRa/Sniffing/README|Sniffing Techniques]] (SDR, gr-lora, multi-SF reception)
+- [[LoRa/Scripting/README|Packet Crafting]] (GNU Radio, Arduino-LMIC, Python)
+- OTAA/ABP security (AES-128, MIC calculation)
+- Both frequency bands (868 MHz EU, 915 MHz US)
 
 ---
 
@@ -219,18 +246,18 @@ parent: "[[README]]"
 ## 📖 Learning Paths
 
 ### Beginner: Understanding BLE Basics
-1. [[BLE/01-protocol-overview|BLE Protocol Overview]] (Sections 1-6)
-2. [[BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]] (Sections 1-3)
+1. [[Bluetooth/BLE/01-protocol-overview|BLE Protocol Overview]] (Sections 1-6)
+2. [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]] (Sections 1-3)
 3. Practice: Use `hcitool lescan` and `gatttool`
 
 ### Intermediate: Implementing Basic Attacks
-4. [[BLE/DoS/01-dos-attack-theory|DoS Theory]] (Sections 1-3)
-5. [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] (Sections 1-3)
+4. [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Theory]] (Sections 1-3)
+5. [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] (Sections 1-3)
 6. Implement: Advertising flood with address rotation
 
 ### Advanced: Full Attack Suite & ML Integration
-7. [[BLE/DoS/01-dos-attack-theory|Complete DoS Analysis]]
-8. [[BLE/Scripting/01-packet-crafting-basics|Advanced Crafting]] (All sections)
+7. [[Bluetooth/BLE/DoS/01-dos-attack-theory|Complete DoS Analysis]]
+8. [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Advanced Crafting]] (All sections)
 9. Build: Automated attack framework with traffic capture
 10. Train: ML model on labeled datasets
 
@@ -238,21 +265,23 @@ parent: "[[README]]"
 
 ## 📊 Documentation Statistics
 
-### BLE Documentation
-- **Total Files**: 13 markdown files
-- **Total Size**: ~230 KB
-- **Code Examples**: 50+ (Python & C++)
-- **Protocol Tables**: 30+ reference tables
-- **Attack Vectors**: 25+ documented
-- **Layer Coverage**: 7 layers (PHY → Application)
+### Protocol Documentation
+- **BLE**: 13 files (~230 KB, 25+ attack vectors, 7 protocol layers)
+- **WiFi**: 6 files (comprehensive 802.11b-WiFi 7, WPA/WPA2/WPA3)
+- **Zigbee**: 6 files (complete 802.15.4 + Zigbee stack, industrial IoT)
+- **LoRa**: 6 files (LoRa PHY + LoRaWAN MAC, OTAA/ABP)
+- **Total Code Examples**: 150+ (Python, C++, GNU Radio)
+- **Total Attack Vectors**: 75+ documented across all protocols
 
 ### Research Progress
 - ✅ **BLE Protocol Analysis**: Complete
 - ✅ **BLE DoS Theory**: Complete
 - ✅ **BLE Packet Crafting**: Complete
 - 🔄 **BLE DoS Implementation**: In Progress
-- 📋 **WiFi Protocol Analysis**: Planned
-- 📋 **Zigbee Protocol Analysis**: Planned
+- ✅ **WiFi Protocol & Attack Documentation**: Complete
+- ✅ **Zigbee Protocol & Attack Documentation**: Complete
+- ✅ **LoRa Protocol & Attack Documentation**: Complete
+- 📋 **Bluetooth Classic Documentation**: Planned
 
 ---
 
@@ -331,13 +360,13 @@ All techniques documented in this repository are for:
 ### For New Researchers
 1. Start with [[README|Main README]]
 2. Review [[Lab-Setup/README|Lab Setup]] for hardware requirements
-3. Read [[BLE/01-protocol-overview|BLE Protocol Overview]]
+3. Read [[Bluetooth/BLE/01-protocol-overview|BLE Protocol Overview]]
 4. Follow beginner learning path above
 
 ### For Experienced Security Researchers
-1. Jump to [[BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
-2. Reference [[BLE/DoS/03-dos-attack-cheatsheet|Cheatsheet]] for quick lookups
-3. Use [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] for implementation
+1. Jump to [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
+2. Reference [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Cheatsheet]] for quick lookups
+3. Use [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] for implementation
 4. Build custom attacks based on documented vectors
 
 ### For ML/Data Science Focus
