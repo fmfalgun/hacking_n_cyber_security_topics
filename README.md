@@ -17,7 +17,7 @@ This repository documents a **defensive security research project** focused on u
 ### Research Methodology
 
 ```
-1. Protocol Analysis → Deep dive into protocol stacks (BLE, WiFi, Zigbee)
+1. Protocol Analysis → Deep dive into protocol stacks (Bluetooth, WiFi, Zigbee, LoRa)
 2. Attack Implementation → Practical exploitation of vulnerabilities
 3. Traffic Capture → Labeled packet captures of attack traffic
 4. Dataset Generation → Organized datasets with attack metadata
@@ -34,18 +34,23 @@ This repository documents a **defensive security research project** focused on u
 
 ---
 
-## 📡 Wireless Protocols (Current Focus)
+## 📡 Wireless Protocols
 
-### Bluetooth Low Energy (BLE)
+### 1. Bluetooth
+**Status**: ✅ BLE Active | 📋 Classic Planned
+
+[[Bluetooth/README|→ Bluetooth Research Hub]]
+
+Comprehensive research covering **both Bluetooth Classic (BR/EDR)** and **Bluetooth Low Energy (BLE)** protocols.
+
+#### Bluetooth Low Energy (BLE)
 **Status**: ✅ Active Research | **Phase**: DoS Attack Implementation
 
-The BLE research is the most comprehensive section, covering all protocol layers from Physical to Application, with detailed attack analysis and implementation guides.
-
 **Quick Links**:
-- [[BLE/README|BLE Research Hub]]
-- [[BLE/01-protocol-overview|Complete Protocol Breakdown]]
-- [[BLE/DoS/README|Denial of Service Attacks]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Guide]]
+- [[Bluetooth/BLE/README|BLE Research Hub]]
+- [[Bluetooth/BLE/01-protocol-overview|Complete Protocol Breakdown]]
+- [[Bluetooth/BLE/DoS/README|Denial of Service Attacks]]
+- [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting Guide]]
 
 **Key Deliverables**:
 - ✅ Complete protocol documentation (7 layers, 230KB)
@@ -53,38 +58,57 @@ The BLE research is the most comprehensive section, covering all protocol layers
 - ✅ Python & C++ packet crafting guides
 - 🔄 Attack implementation scripts (in progress)
 
+#### Bluetooth Classic (BR/EDR)
+**Status**: 📋 Planned | **Start**: After WiFi
+
+**Planned Coverage**: BlueBorne, A2DP, RFCOMM, SPP, pairing attacks
+
+[[Bluetooth/Classic/README|→ Bluetooth Classic Overview]]
+
 ---
 
-### WiFi (802.11)
-**Status**: 📋 Planned | **Start**: After BLE completion
+### 2. WiFi (802.11)
+**Status**: ✅ Complete | **User Managed**
 
-WiFi research will cover 802.11 family protocols, focusing on deauthentication attacks, rogue AP techniques, and WPA2/WPA3 security analysis.
+WiFi research covers 802.11 family protocols with focus on deauthentication attacks, rogue AP techniques, and WPA2/WPA3 security analysis.
 
-**Planned Coverage**:
+[[WiFi/README|→ WiFi Research]]
+
+**Coverage**:
 - Protocol analysis (PHY, MAC, management frames)
 - DoS attacks (deauth, disassoc, beacon flooding)
 - MITM attacks (evil twin, rogue AP, karma attacks)
 - WPA2/WPA3 handshake analysis and exploitation
 
-[[WiFi/README|→ WiFi Research (Placeholder)]]
-
 ---
 
-### Zigbee (IEEE 802.15.4)
-**Status**: 📋 Planned | **Start**: After WiFi completion
+### 3. Zigbee (IEEE 802.15.4)
+**Status**: 📋 Planned | **Priority**: After WiFi
 
 Zigbee research targeting IoT device security, key extraction, and protocol-level vulnerabilities.
 
-[[Zigbee/README|→ Zigbee Research (Placeholder)]]
+[[Zigbee/README|→ Zigbee Research]]
+
+**Planned Focus**:
+- 802.15.4 PHY/MAC layer analysis
+- Zigbee network layer attacks
+- Key extraction and replay attacks
+- Smart home device exploitation
 
 ---
 
-### NFC
-**Status**: 📋 Planned | **Start**: Future
+### 4. LoRa/LoRaWAN
+**Status**: 📋 Planned | **Priority**: After Zigbee
 
-Near Field Communication research for contactless payment security and relay attack analysis.
+Long-range IoT protocol research covering physical layer (LoRa) and MAC layer (LoRaWAN) security.
 
-[[NFC/README|→ NFC Research (Placeholder)]]
+[[LoRa/README|→ LoRa Research]]
+
+**Planned Focus**:
+- Chirp Spread Spectrum (CSS) analysis
+- OTAA/ABP attack vectors
+- Gateway spoofing and jamming
+- LoRaWAN cryptographic analysis
 
 ---
 
@@ -137,7 +161,10 @@ Machine learning pipelines for training intrusion detection models on labeled da
 | Link | Description |
 |------|-------------|
 | [[INDEX\|📖 Complete Index]] | Comprehensive index of all documentation |
-| [[BLE/README\|📡 BLE Research]] | Bluetooth Low Energy security research |
+| [[Bluetooth/README\|📡 Bluetooth]] | Bluetooth Classic & BLE security research |
+| [[WiFi/README\|📶 WiFi]] | 802.11 wireless security (user managed) |
+| [[Zigbee/README\|🏠 Zigbee]] | IoT protocol security (planned) |
+| [[LoRa/README\|📻 LoRa]] | Long-range IoT protocol (planned) |
 | [[Lab-Setup/README\|⚙️ Lab Setup]] | Hardware and software setup |
 | [[Traffic-Capture/README\|📊 Traffic Capture]] | Capture procedures and tools |
 | [[Dataset-Organization/README\|🗂️ Datasets]] | Dataset management |
@@ -150,23 +177,26 @@ This repository uses **hierarchical linking** for Obsidian graph visualization:
 ```
 README (Root)
 ├── INDEX
-├── BLE/
+├── Bluetooth/
 │   ├── README
-│   ├── 01-protocol-overview
-│   ├── DoS/
+│   ├── Classic/  (Bluetooth BR/EDR - planned)
 │   │   ├── README
-│   │   ├── 01-dos-attack-theory
-│   │   ├── 02-dos-implementation-guide
-│   │   └── 03-dos-attack-cheatsheet
-│   ├── MITM/
-│   ├── Injection/
-│   ├── Sniffing/
-│   └── Scripting/
+│   │   ├── DoS/, MITM/, Injection/, Sniffing/, Scripting/
+│   └── BLE/  (Bluetooth Low Energy - active)
 │       ├── README
-│       └── 01-packet-crafting-basics
-├── WiFi/ (planned)
+│       ├── 01-protocol-overview
+│       ├── DoS/
+│       │   ├── README
+│       │   ├── 01-dos-attack-theory
+│       │   ├── 02-dos-implementation-guide
+│       │   └── 03-dos-attack-cheatsheet
+│       ├── MITM/, Injection/, Sniffing/
+│       └── Scripting/
+│           ├── README
+│           └── 01-packet-crafting-basics
+├── WiFi/ (user managed)
 ├── Zigbee/ (planned)
-├── NFC/ (planned)
+├── LoRa/ (planned)
 ├── Lab-Setup/
 ├── Traffic-Capture/
 ├── Dataset-Organization/
@@ -179,15 +209,15 @@ README (Root)
 
 ### For Security Researchers
 
-1. **Understand the Protocol**: Read [[BLE/01-protocol-overview|BLE Protocol Overview]]
-2. **Study Attack Vectors**: Review [[BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
-3. **Learn Packet Crafting**: Follow [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Guide]]
-4. **Implement Attacks**: Reference [[BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
+1. **Understand the Protocol**: Read [[Bluetooth/BLE/01-protocol-overview|BLE Protocol Overview]]
+2. **Study Attack Vectors**: Review [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
+3. **Learn Packet Crafting**: Follow [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting Guide]]
+4. **Implement Attacks**: Reference [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
 5. **Capture Traffic**: Set up [[Traffic-Capture/README|capture pipeline]]
 
 ### For ML/Data Science Practitioners
 
-1. **Understand Attack Context**: Skim [[BLE/DoS/README|DoS Overview]]
+1. **Understand Attack Context**: Skim [[Bluetooth/BLE/DoS/README|DoS Overview]]
 2. **Review Labeling Standards**: Read [[Dataset-Organization/README|Dataset Organization]]
 3. **Access Datasets**: Navigate to labeled capture directories
 4. **Feature Engineering**: Follow [[Model-Training/README|feature extraction guides]]
@@ -197,7 +227,7 @@ README (Root)
 
 1. **Start Here**: Read this README completely
 2. **Explore Index**: Browse [[INDEX|Complete Index]] for overview
-3. **Learn Basics**: Study [[BLE/01-protocol-overview|Protocol Fundamentals]]
+3. **Learn Basics**: Study [[Bluetooth/BLE/01-protocol-overview|Protocol Fundamentals]]
 4. **Hands-On**: Follow [[Lab-Setup/README|Lab Setup]] to configure tools
 5. **Practice**: Use `hcitool` and `gatttool` for basic BLE operations
 
@@ -262,12 +292,14 @@ This research is conducted for:
 ### Overall Progress
 | Component | Status | Progress |
 |-----------|--------|----------|
-| BLE Protocol Analysis | ✅ Complete | 100% |
-| BLE DoS Theory | ✅ Complete | 100% |
-| BLE Packet Crafting | ✅ Complete | 100% |
-| BLE DoS Implementation | 🔄 In Progress | 60% |
-| WiFi Protocol Analysis | 📋 Planned | 0% |
-| Zigbee Protocol Analysis | 📋 Planned | 0% |
+| **Bluetooth BLE** Protocol Analysis | ✅ Complete | 100% |
+| **Bluetooth BLE** DoS Theory | ✅ Complete | 100% |
+| **Bluetooth BLE** Packet Crafting | ✅ Complete | 100% |
+| **Bluetooth BLE** DoS Implementation | 🔄 In Progress | 60% |
+| **Bluetooth Classic** Documentation | 📋 Planned | 0% |
+| **WiFi** Research | ✅ User Managed | - |
+| **Zigbee** Protocol Analysis | 📋 Planned | 0% |
+| **LoRa** Protocol Analysis | 📋 Planned | 0% |
 | Traffic Capture Pipeline | 📋 Planned | 0% |
 | ML Model Training | 📋 Planned | 0% |
 
@@ -275,27 +307,40 @@ This research is conducted for:
 
 ## 🗺️ Roadmap
 
-### Phase 1: BLE Complete (Current - Q1 2025)
-- [x] Protocol documentation
-- [x] Attack theory and analysis
-- [x] Packet crafting guides
+### Phase 1: Bluetooth BLE (Current - Q1 2025)
+- [x] Protocol documentation (7 layers)
+- [x] Attack theory and analysis (25+ vectors)
+- [x] Packet crafting guides (Python/C++)
 - [ ] Attack script implementation
 - [ ] Traffic capture and labeling
 - [ ] Initial dataset generation
 
-### Phase 2: WiFi Research (Q2 2025)
-- [ ] 802.11 protocol analysis
-- [ ] Deauth/disassoc attack implementation
-- [ ] Rogue AP and evil twin attacks
-- [ ] WPA2/WPA3 security analysis
+### Phase 2: WiFi Research (User Managed)
+- [x] User will update WiFi research independently
+- [ ] Integration with main repository structure
+- [ ] Cross-reference with other protocols
 
-### Phase 3: Zigbee Research (Q3 2025)
+### Phase 3: Zigbee Research (Q2 2025)
 - [ ] 802.15.4 protocol analysis
+- [ ] Zigbee network layer documentation
 - [ ] IoT device security testing
-- [ ] Key extraction attacks
-- [ ] Replay attack implementation
+- [ ] Key extraction and replay attacks
+- [ ] Smart home exploitation
 
-### Phase 4: ML Integration (Q4 2025)
+### Phase 4: LoRa Research (Q3 2025)
+- [ ] LoRa PHY (CSS modulation) analysis
+- [ ] LoRaWAN MAC layer documentation
+- [ ] OTAA/ABP security testing
+- [ ] Gateway spoofing and jamming
+- [ ] Cryptographic analysis
+
+### Phase 5: Bluetooth Classic (Q3-Q4 2025)
+- [ ] BR/EDR protocol analysis
+- [ ] BlueBorne and classic vulnerabilities
+- [ ] A2DP, RFCOMM, SPP exploitation
+- [ ] Pairing attack implementation
+
+### Phase 6: ML Integration (Q4 2025)
 - [ ] Consolidated multi-protocol datasets
 - [ ] Feature engineering pipelines
 - [ ] Model architecture design (LSTM, Transformer)
@@ -357,9 +402,10 @@ Unauthorized use of these techniques against systems you do not own or have expl
 | Resource | Link |
 |----------|------|
 | **📖 Complete Index** | [[INDEX\|View Full Index]] |
-| **📡 BLE Research** | [[BLE/README\|BLE Hub]] |
-| **📊 DoS Attacks** | [[BLE/DoS/README\|DoS Overview]] |
-| **💻 Packet Crafting** | [[BLE/Scripting/01-packet-crafting-basics\|Crafting Guide]] |
+| **📡 Bluetooth** | [[Bluetooth/README\|Bluetooth Hub]] |
+| **⚡ BLE Research** | [[Bluetooth/BLE/README\|BLE Details]] |
+| **📶 WiFi Research** | [[WiFi/README\|WiFi Hub]] |
+| **📻 LoRa Research** | [[LoRa/README\|LoRa Hub]] |
 | **⚙️ Lab Setup** | [[Lab-Setup/README\|Setup Guide]] |
 
 ---

@@ -2,7 +2,7 @@
 title: BLE DoS Attack Cheatsheet - Quick Reference
 tags: [BLE, DoS, cheatsheet, header-fields, opcodes, quick-reference]
 category: BLE Security
-parent: "[[BLE/DoS/README]]"
+parent: "[[Bluetooth/BLE/DoS/README]]"
 status: complete
 ---
 
@@ -614,8 +614,8 @@ This structured README provides comprehensive tables for all BLE protocol layers
 ---
 
 **Related**:
-- [[BLE/DoS/README|DoS Overview]]
-- [[BLE/DoS/01-dos-attack-theory|DoS Theory & Analysis]]
-- [[BLE/01-protocol-overview|Protocol Overview]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
-- [[BLE/README|BLE Home]]
+- [[Bluetooth/BLE/DoS/README|DoS Overview]]
+- [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Theory & Analysis]]
+- [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
+- [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+- [[Bluetooth/BLE/README|BLE Home]]

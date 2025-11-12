@@ -2,7 +2,7 @@
 title: BLE Denial of Service (DoS) Attacks
 tags: [BLE, DoS, denial-of-service, flooding, resource-exhaustion]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: active
 ---
 
@@ -56,21 +56,21 @@ Denial of Service (DoS) attacks on BLE aim to disrupt communication, exhaust res
 ## Document Organization
 
 ### Theory & Analysis
-[[BLE/DoS/01-dos-attack-theory|01. DoS Attack Theory & Analysis]]
+[[Bluetooth/BLE/DoS/01-dos-attack-theory|01. DoS Attack Theory & Analysis]]
 - Layer-by-layer exploitation analysis (35k+ lines)
 - Attack vector breakdown with technical details
 - Hardware capability mapping
 - Vendor vulnerability comparison
 
 ### Implementation Guide
-[[BLE/DoS/02-dos-implementation-guide|02. DoS Implementation Guide]]
+[[Bluetooth/BLE/DoS/02-dos-implementation-guide|02. DoS Implementation Guide]]
 - Step-by-step attack implementation
 - Python and C++ code examples
 - BlueZ and nRF52840 approaches
 - Capture and labeling procedures
 
 ### Quick Reference
-[[BLE/DoS/03-dos-attack-cheatsheet|03. DoS Attack Cheatsheet]]
+[[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|03. DoS Attack Cheatsheet]]
 - Header field reference tables
 - OpCode and value quick lookups
 - Attack vector to field mappings
@@ -130,10 +130,10 @@ Quick lookup for attack parameters:
 ## Implementation Workflow
 
 ```
-1. Study Protocol → [[BLE/01-protocol-overview|Protocol Overview]]
+1. Study Protocol → [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
    └─ Understand target layer
 
-2. Craft Attack Packets → [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+2. Craft Attack Packets → [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
    └─ Use Python/C++ examples
 
 3. Implement Attack Script
@@ -205,10 +205,10 @@ impact: "server_unresponsive"
 ---
 
 **Related**:
-- [[BLE/README|BLE Home]]
-- [[BLE/01-protocol-overview|Protocol Overview]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
-- [[BLE/MITM/README|MITM Attacks]]
-- [[BLE/Injection/README|Injection Attacks]]
+- [[Bluetooth/BLE/README|BLE Home]]
+- [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
+- [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+- [[Bluetooth/BLE/MITM/README|MITM Attacks]]
+- [[Bluetooth/BLE/Injection/README|Injection Attacks]]
 
 **Status**: Implementation phase - Attack scripts in development

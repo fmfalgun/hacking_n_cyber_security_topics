@@ -2,7 +2,7 @@
 title: BLE Injection Attacks
 tags: [BLE, injection, packet-crafting, exploitation]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: active
 ---
 
@@ -47,4 +47,4 @@ Injection attacks involve crafting and sending malicious or malformed BLE packet
 Detailed implementation guides based on scripting basics for BLE.
 
 ---
-**Related**: [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] • [[BLE/DoS/README|BLE DoS]] • [[BLE/README|BLE Home]]
+**Related**: [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]] • [[Bluetooth/BLE/DoS/README|BLE DoS]] • [[Bluetooth/BLE/README|BLE Home]]

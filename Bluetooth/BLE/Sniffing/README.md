@@ -2,7 +2,7 @@
 title: BLE Sniffing & Reconnaissance
 tags: [BLE, sniffing, reconnaissance, traffic-analysis]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: active
 ---
 
@@ -54,4 +54,4 @@ Sniffing attacks involve passive or active monitoring of BLE communications to g
 Detailed capture and analysis procedures coming soon.
 
 ---
-**Related**: [[BLE/MITM/README|BLE MITM]] • [[Traffic-Capture/README|Traffic Capture]] • [[BLE/README|BLE Home]]
+**Related**: [[Bluetooth/BLE/MITM/README|BLE MITM]] • [[Traffic-Capture/README|Traffic Capture]] • [[Bluetooth/BLE/README|BLE Home]]

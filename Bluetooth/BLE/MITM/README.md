@@ -2,7 +2,7 @@
 title: BLE MITM Attacks
 tags: [BLE, MITM, man-in-the-middle, interception]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: active
 ---
 
@@ -42,4 +42,4 @@ Man-in-the-Middle attacks on BLE involve intercepting and potentially manipulati
 Detailed implementation guides coming from analysis of existing research.
 
 ---
-**Related**: [[BLE/DoS/README|BLE DoS]] • [[BLE/Injection/README|BLE Injection]] • [[BLE/README|BLE Home]]
+**Related**: [[Bluetooth/BLE/DoS/README|BLE DoS]] • [[Bluetooth/BLE/Injection/README|BLE Injection]] • [[Bluetooth/BLE/README|BLE Home]]

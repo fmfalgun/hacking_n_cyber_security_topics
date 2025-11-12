@@ -2,7 +2,7 @@
 title: Bluetooth Low Energy (BLE) Security Research
 tags: [BLE, bluetooth, wireless-security, protocol-analysis]
 category: Wireless Protocols
-parent: "[[README]]"
+parent: "[[Bluetooth/README]]"
 status: active
 ---
 
@@ -23,38 +23,38 @@ This directory contains comprehensive research on Bluetooth Low Energy (BLE) pro
 
 ### Core Documentation
 
-- [[BLE/01-protocol-overview|01. BLE Protocol Overview]] - Complete protocol stack breakdown with all layers
+- [[Bluetooth/BLE/01-protocol-overview|01. BLE Protocol Overview]] - Complete protocol stack breakdown with all layers
 
 ### Attack Categories
 
 #### Denial of Service (DoS)
-- [[BLE/DoS/README|DoS Attacks Overview]]
-  - [[BLE/DoS/01-dos-attack-theory|Attack Theory & Analysis]]
-  - [[BLE/DoS/02-dos-implementation-guide|Implementation Guide]]
-  - [[BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
+- [[Bluetooth/BLE/DoS/README|DoS Attacks Overview]]
+  - [[Bluetooth/BLE/DoS/01-dos-attack-theory|Attack Theory & Analysis]]
+  - [[Bluetooth/BLE/DoS/02-dos-implementation-guide|Implementation Guide]]
+  - [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
 
 #### Man-in-the-Middle (MITM)
-- [[BLE/MITM/README|MITM Attacks Overview]]
+- [[Bluetooth/BLE/MITM/README|MITM Attacks Overview]]
   - Pairing interception
   - Connection hijacking
   - Data manipulation
 
 #### Injection Attacks
-- [[BLE/Injection/README|Injection Attacks Overview]]
+- [[Bluetooth/BLE/Injection/README|Injection Attacks Overview]]
   - Packet crafting
   - Protocol fuzzing
   - Malformed data injection
 
 #### Sniffing & Reconnaissance
-- [[BLE/Sniffing/README|Sniffing Overview]]
+- [[Bluetooth/BLE/Sniffing/README|Sniffing Overview]]
   - Passive monitoring
   - Service discovery
   - Traffic analysis
 
 ### Implementation & Scripting
 
-- [[BLE/Scripting/README|Scripting & Packet Crafting]]
-  - [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics (Python & C++)]]
+- [[Bluetooth/BLE/Scripting/README|Scripting & Packet Crafting]]
+  - [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics (Python & C++)]]
   - HCI command implementation
   - Attack automation
 
@@ -78,13 +78,13 @@ This directory contains comprehensive research on Bluetooth Low Energy (BLE) pro
 ## Learning Path
 
 ### Beginner
-1. Read [[BLE/01-protocol-overview|Protocol Overview]]
+1. Read [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
 2. Understand advertising, connection, and data transfer phases
 3. Run basic HCI commands (`hcitool`, `gatttool`)
 
 ### Intermediate
-4. Study [[BLE/DoS/01-dos-attack-theory|DoS Attack Theory]]
-5. Review [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics]]
+4. Study [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Attack Theory]]
+5. Review [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics]]
 6. Implement simple advertising flood
 
 ### Advanced

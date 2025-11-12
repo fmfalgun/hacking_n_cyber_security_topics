@@ -2,7 +2,7 @@
 title: BLE Packet Crafting Basics - Python & C++
 tags: [BLE, packet-crafting, python, cpp, binary-data, struct, scapy]
 category: BLE Security
-parent: "[[BLE/Scripting/README]]"
+parent: "[[Bluetooth/BLE/Scripting/README]]"
 status: complete
 ---
 
@@ -1852,8 +1852,8 @@ This comprehensive guide covers everything needed to craft BLE packets at the bi
 ---
 
 **Related**:
-- [[BLE/Scripting/README|Scripting Overview]]
-- [[BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]]
-- [[BLE/01-protocol-overview|Protocol Overview]]
-- [[BLE/DoS/01-dos-attack-theory|DoS Theory]]
-- [[BLE/README|BLE Home]]
+- [[Bluetooth/BLE/Scripting/README|Scripting Overview]]
+- [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]]
+- [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
+- [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Theory]]
+- [[Bluetooth/BLE/README|BLE Home]]

@@ -2,7 +2,7 @@
 title: BLE Scripting & Packet Crafting
 tags: [BLE, scripting, packet-crafting, python, cpp, hci]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: active
 ---
 
@@ -28,7 +28,7 @@ This section covers practical implementation techniques for crafting BLE packets
 ## Document Organization
 
 ### Packet Crafting Basics
-[[BLE/Scripting/01-packet-crafting-basics|01. Packet Crafting Basics (Python & C++)]]
+[[Bluetooth/BLE/Scripting/01-packet-crafting-basics|01. Packet Crafting Basics (Python & C++)]]
 - Binary data fundamentals (endianness, bit fields)
 - Python `struct` module and Scapy
 - C++ bit manipulation and packing
@@ -156,10 +156,10 @@ l2cap_pkt.insert(l2cap_pkt.end(), att_pdu.begin(), att_pdu.end());
 ## Attack Implementation Workflow
 
 ```
-1. Define Attack → [[BLE/DoS/README|Choose DoS Vector]]
+1. Define Attack → [[Bluetooth/BLE/DoS/README|Choose DoS Vector]]
    └─ Select target layer and operation
 
-2. Identify Header Fields → [[BLE/DoS/03-dos-attack-cheatsheet|Cheatsheet]]
+2. Identify Header Fields → [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Cheatsheet]]
    └─ Lookup opcodes, field sizes
 
 3. Craft Packet
@@ -278,17 +278,17 @@ ubertooth-btle -f -c capture.pcap
 
 ## Next Steps
 
-- Study [[BLE/Scripting/01-packet-crafting-basics|detailed crafting guide]]
-- Implement [[BLE/DoS/README|DoS attacks]] with custom packets
-- Combine with [[BLE/Injection/README|injection techniques]]
+- Study [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|detailed crafting guide]]
+- Implement [[Bluetooth/BLE/DoS/README|DoS attacks]] with custom packets
+- Combine with [[Bluetooth/BLE/Injection/README|injection techniques]]
 - Capture with [[Traffic-Capture/README|Wireshark pipeline]]
 
 ---
 
 **Related**:
-- [[BLE/README|BLE Home]]
-- [[BLE/01-protocol-overview|Protocol Overview]]
-- [[BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]]
+- [[Bluetooth/BLE/README|BLE Home]]
+- [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
+- [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Header Field Reference]]
 - [[Lab-Setup/README|Lab Setup]]
 
 **Status**: Active development - Packet crafting guide complete, automation framework coming soon

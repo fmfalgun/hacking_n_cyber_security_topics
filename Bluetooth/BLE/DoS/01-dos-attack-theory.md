@@ -2,7 +2,7 @@
 title: BLE DoS Attack Theory & Analysis
 tags: [BLE, DoS, attack-analysis, vulnerability-research, exploitation]
 category: BLE Security
-parent: "[[BLE/DoS/README]]"
+parent: "[[Bluetooth/BLE/DoS/README]]"
 status: complete
 ---
 
@@ -3386,8 +3386,8 @@ This comprehensive guide covers:
 ---
 
 **Related**:
-- [[BLE/DoS/README|DoS Overview]]
-- [[BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
-- [[BLE/01-protocol-overview|Protocol Overview]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
-- [[BLE/README|BLE Home]]
+- [[Bluetooth/BLE/DoS/README|DoS Overview]]
+- [[Bluetooth/BLE/DoS/03-dos-attack-cheatsheet|Quick Reference Cheatsheet]]
+- [[Bluetooth/BLE/01-protocol-overview|Protocol Overview]]
+- [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting]]
+- [[Bluetooth/BLE/README|BLE Home]]

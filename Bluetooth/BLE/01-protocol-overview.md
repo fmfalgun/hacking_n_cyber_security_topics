@@ -2,7 +2,7 @@
 title: BLE Protocol Overview - Complete Stack Breakdown
 tags: [BLE, protocol-analysis, PHY, link-layer, L2CAP, ATT, GATT, SMP, HCI]
 category: BLE Security
-parent: "[[BLE/README]]"
+parent: "[[Bluetooth/BLE/README]]"
 status: complete
 ---
 
@@ -843,7 +843,7 @@ What's your next move? 🎯
 ---
 
 **Related**:
-- [[BLE/README|BLE Home]]
-- [[BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
-- [[BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics]]
+- [[Bluetooth/BLE/README|BLE Home]]
+- [[Bluetooth/BLE/DoS/01-dos-attack-theory|DoS Attack Analysis]]
+- [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting Basics]]
 - [[README|Home]] • [[INDEX|Full Index]]
