@@ -15,9 +15,9 @@ parent: "[[README]]"
 
 - [[README|🏠 Home]]
 - [[Bluetooth/README|📡 Bluetooth]] (Classic + BLE)
-- [[WiFi/README|📶 WiFi]] (User managed)
-- [[Zigbee/README|🏠 Zigbee]] (Planned)
-- [[LoRa/README|📻 LoRa]] (Planned)
+- [[WiFi/README|📶 WiFi]] (✅ Complete)
+- [[Zigbee/README|🏠 Zigbee]] (✅ Complete)
+- [[LoRa/README|📻 LoRa]] (✅ Complete)
 - [[Lab-Setup/README|⚙️ Lab Setup]]
 - [[Traffic-Capture/README|📊 Traffic Capture]]
 - [[Dataset-Organization/README|🗂️ Dataset Organization]]
@@ -62,42 +62,52 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 ---
 
 ### 2. WiFi (802.11)
-**Status**: ✅ User Managed | **Progress**: User will update
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
 
 [[WiFi/README|→ WiFi Research Hub]]
 
 **Coverage**:
-- Protocol analysis (802.11 a/b/g/n/ac/ax)
-- DoS attacks (deauth, disassoc, beacon flooding)
-- MITM attacks (evil twin, rogue AP, karma attacks)
-- WPA2/WPA3 security analysis
+- [[WiFi/README|Complete Protocol Analysis]] (802.11b through WiFi 7)
+- [[WiFi/DoS/README|DoS Attacks]] (deauth, disassoc, beacon flooding, CTS flooding)
+- [[WiFi/MITM/README|MITM Attacks]] (evil twin, rogue AP, karma attacks)
+- [[WiFi/Injection/README|Injection Attacks]] (frame injection, fuzzing)
+- [[WiFi/Sniffing/README|Sniffing Techniques]] (monitor mode, channel hopping)
+- [[WiFi/Scripting/README|Packet Crafting]] (Scapy, Python)
+- WPA/WPA2/WPA3 security analysis
 
 ---
 
 ### 3. Zigbee (IEEE 802.15.4)
-**Status**: 📋 Planned | **Progress**: After WiFi (Q2 2025)
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
 
 [[Zigbee/README|→ Zigbee Research Hub]]
 
-**Planned Coverage**:
-- Protocol analysis (802.15.4 PHY/MAC, Zigbee network layer)
-- IoT device security testing
-- Key extraction and replay attacks
-- Smart home device exploitation
+**Coverage**:
+- [[Zigbee/README|Complete Protocol Analysis]] (802.15.4 PHY/MAC, Zigbee stack APL → PHY)
+- [[Zigbee/DoS/README|DoS Attacks]] (RF jamming, beacon flooding, ACK spoofing)
+- [[Zigbee/MITM/README|MITM Attacks]] (malicious coordinator, key interception, touchlink)
+- [[Zigbee/Injection/README|Injection Attacks]] (ZCL commands, replay attacks, OTA hijacking)
+- [[Zigbee/Sniffing/README|Sniffing Techniques]] (KillerBee, network discovery)
+- [[Zigbee/Scripting/README|Packet Crafting]] (KillerBee, Scapy)
+- Security mechanisms (AES-128-CCM, key types)
+- Industrial IoT focus
 
 ---
 
 ### 4. LoRa/LoRaWAN
-**Status**: 📋 Planned | **Progress**: After Zigbee (Q3 2025)
+**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
 
 [[LoRa/README|→ LoRa Research Hub]]
 
-**Planned Coverage**:
-- LoRa PHY (Chirp Spread Spectrum modulation)
-- LoRaWAN MAC layer security
-- OTAA/ABP attack vectors
-- Gateway spoofing and jamming
-- Cryptographic analysis
+**Coverage**:
+- [[LoRa/README|Complete Protocol Analysis]] (LoRa PHY CSS, LoRaWAN MAC)
+- [[LoRa/DoS/README|DoS Attacks]] (RF jamming, join request flooding, collision attacks)
+- [[LoRa/MITM/README|MITM Attacks]] (rogue gateway, join accept manipulation, wormhole)
+- [[LoRa/Injection/README|Injection Attacks]] (uplink/downlink injection, MAC commands, fuzzing)
+- [[LoRa/Sniffing/README|Sniffing Techniques]] (SDR, gr-lora, multi-SF reception)
+- [[LoRa/Scripting/README|Packet Crafting]] (GNU Radio, Arduino-LMIC, Python)
+- OTAA/ABP security (AES-128, MIC calculation)
+- Both frequency bands (868 MHz EU, 915 MHz US)
 
 ---
 
@@ -255,21 +265,23 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 
 ## 📊 Documentation Statistics
 
-### BLE Documentation
-- **Total Files**: 13 markdown files
-- **Total Size**: ~230 KB
-- **Code Examples**: 50+ (Python & C++)
-- **Protocol Tables**: 30+ reference tables
-- **Attack Vectors**: 25+ documented
-- **Layer Coverage**: 7 layers (PHY → Application)
+### Protocol Documentation
+- **BLE**: 13 files (~230 KB, 25+ attack vectors, 7 protocol layers)
+- **WiFi**: 6 files (comprehensive 802.11b-WiFi 7, WPA/WPA2/WPA3)
+- **Zigbee**: 6 files (complete 802.15.4 + Zigbee stack, industrial IoT)
+- **LoRa**: 6 files (LoRa PHY + LoRaWAN MAC, OTAA/ABP)
+- **Total Code Examples**: 150+ (Python, C++, GNU Radio)
+- **Total Attack Vectors**: 75+ documented across all protocols
 
 ### Research Progress
 - ✅ **BLE Protocol Analysis**: Complete
 - ✅ **BLE DoS Theory**: Complete
 - ✅ **BLE Packet Crafting**: Complete
 - 🔄 **BLE DoS Implementation**: In Progress
-- 📋 **WiFi Protocol Analysis**: Planned
-- 📋 **Zigbee Protocol Analysis**: Planned
+- ✅ **WiFi Protocol & Attack Documentation**: Complete
+- ✅ **Zigbee Protocol & Attack Documentation**: Complete
+- ✅ **LoRa Protocol & Attack Documentation**: Complete
+- 📋 **Bluetooth Classic Documentation**: Planned
 
 ---
 

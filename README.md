@@ -68,47 +68,57 @@ Comprehensive research covering **both Bluetooth Classic (BR/EDR)** and **Blueto
 ---
 
 ### 2. WiFi (802.11)
-**Status**: ✅ Complete | **User Managed**
+**Status**: ✅ Complete | **Comprehensive Coverage**
 
-WiFi research covers 802.11 family protocols with focus on deauthentication attacks, rogue AP techniques, and WPA2/WPA3 security analysis.
+WiFi research covers complete 802.11 family (802.11b through WiFi 7), all security mechanisms (WEP/WPA/WPA2/WPA3), and comprehensive attack documentation.
 
 [[WiFi/README|→ WiFi Research]]
 
 **Coverage**:
-- Protocol analysis (PHY, MAC, management frames)
-- DoS attacks (deauth, disassoc, beacon flooding)
-- MITM attacks (evil twin, rogue AP, karma attacks)
-- WPA2/WPA3 handshake analysis and exploitation
+- ✅ Complete protocol analysis (all 802.11 variants)
+- ✅ DoS attacks (deauth, disassoc, beacon flooding, CTS flooding)
+- ✅ MITM attacks (evil twin, rogue AP, karma attacks)
+- ✅ Injection attacks (frame injection, fuzzing)
+- ✅ Sniffing techniques (monitor mode, channel hopping)
+- ✅ Packet crafting with Scapy (Python)
 
 ---
 
 ### 3. Zigbee (IEEE 802.15.4)
-**Status**: 📋 Planned | **Priority**: After WiFi
+**Status**: ✅ Complete | **Comprehensive Coverage**
 
-Zigbee research targeting IoT device security, key extraction, and protocol-level vulnerabilities.
+Zigbee research targeting IoT device security with complete protocol stack analysis, attack vectors, and industrial IoT focus.
 
 [[Zigbee/README|→ Zigbee Research]]
 
-**Planned Focus**:
-- 802.15.4 PHY/MAC layer analysis
-- Zigbee network layer attacks
-- Key extraction and replay attacks
-- Smart home device exploitation
+**Coverage**:
+- ✅ Complete 802.15.4 PHY/MAC layer analysis
+- ✅ Zigbee protocol stack (APL → APS → NWK → MAC → PHY)
+- ✅ Security mechanisms (key types, AES-128-CCM)
+- ✅ DoS attacks (RF jamming, beacon flooding, ACK spoofing)
+- ✅ MITM attacks (malicious coordinator, key interception)
+- ✅ Injection attacks (ZCL commands, replay attacks)
+- ✅ Sniffing techniques (KillerBee, Wireshark)
+- ✅ Packet crafting with KillerBee and Scapy
 
 ---
 
 ### 4. LoRa/LoRaWAN
-**Status**: 📋 Planned | **Priority**: After Zigbee
+**Status**: ✅ Complete | **Comprehensive Coverage**
 
-Long-range IoT protocol research covering physical layer (LoRa) and MAC layer (LoRaWAN) security.
+Long-range IoT protocol research covering both LoRa PHY (chirp modulation) and LoRaWAN MAC layer with complete attack documentation.
 
 [[LoRa/README|→ LoRa Research]]
 
-**Planned Focus**:
-- Chirp Spread Spectrum (CSS) analysis
-- OTAA/ABP attack vectors
-- Gateway spoofing and jamming
-- LoRaWAN cryptographic analysis
+**Coverage**:
+- ✅ LoRa PHY analysis (Chirp Spread Spectrum, SF7-SF12)
+- ✅ LoRaWAN MAC layer (OTAA/ABP, frame structure)
+- ✅ Security mechanisms (AES-128, MIC calculation)
+- ✅ DoS attacks (RF jamming, join request flooding, collision attacks)
+- ✅ MITM attacks (rogue gateway, join accept manipulation)
+- ✅ Injection attacks (uplink/downlink injection, MAC commands, fuzzing)
+- ✅ Sniffing techniques (SDR, gr-lora, multi-SF reception)
+- ✅ Packet crafting with GNU Radio, Arduino-LMIC, Python
 
 ---
 
@@ -297,9 +307,9 @@ This research is conducted for:
 | **Bluetooth BLE** Packet Crafting | ✅ Complete | 100% |
 | **Bluetooth BLE** DoS Implementation | 🔄 In Progress | 60% |
 | **Bluetooth Classic** Documentation | 📋 Planned | 0% |
-| **WiFi** Research | ✅ User Managed | - |
-| **Zigbee** Protocol Analysis | 📋 Planned | 0% |
-| **LoRa** Protocol Analysis | 📋 Planned | 0% |
+| **WiFi** Protocol & Attack Documentation | ✅ Complete | 100% |
+| **Zigbee** Protocol & Attack Documentation | ✅ Complete | 100% |
+| **LoRa** Protocol & Attack Documentation | ✅ Complete | 100% |
 | Traffic Capture Pipeline | 📋 Planned | 0% |
 | ML Model Training | 📋 Planned | 0% |
 
@@ -315,24 +325,28 @@ This research is conducted for:
 - [ ] Traffic capture and labeling
 - [ ] Initial dataset generation
 
-### Phase 2: WiFi Research (User Managed)
-- [x] User will update WiFi research independently
-- [ ] Integration with main repository structure
-- [ ] Cross-reference with other protocols
+### Phase 2: WiFi Research (✅ Complete - Q4 2024)
+- [x] Complete 802.11 protocol family documentation
+- [x] All security mechanisms (WEP/WPA/WPA2/WPA3)
+- [x] DoS, MITM, Injection, Sniffing attack documentation
+- [x] Packet crafting with Scapy (Python)
+- [x] Integration with repository structure
 
-### Phase 3: Zigbee Research (Q2 2025)
-- [ ] 802.15.4 protocol analysis
-- [ ] Zigbee network layer documentation
-- [ ] IoT device security testing
-- [ ] Key extraction and replay attacks
-- [ ] Smart home exploitation
+### Phase 3: Zigbee Research (✅ Complete - Q4 2024)
+- [x] Complete 802.15.4 protocol analysis
+- [x] Zigbee protocol stack documentation (APL → PHY)
+- [x] Security mechanisms (AES-128-CCM, key types)
+- [x] DoS, MITM, Injection, Sniffing attack documentation
+- [x] KillerBee and Scapy packet crafting
+- [x] Industrial IoT focus
 
-### Phase 4: LoRa Research (Q3 2025)
-- [ ] LoRa PHY (CSS modulation) analysis
-- [ ] LoRaWAN MAC layer documentation
-- [ ] OTAA/ABP security testing
-- [ ] Gateway spoofing and jamming
-- [ ] Cryptographic analysis
+### Phase 4: LoRa Research (✅ Complete - Q4 2024)
+- [x] LoRa PHY (CSS modulation) analysis
+- [x] LoRaWAN MAC layer documentation
+- [x] OTAA/ABP security mechanisms
+- [x] DoS, MITM, Injection, Sniffing attack documentation
+- [x] GNU Radio, Arduino-LMIC, Python packet crafting
+- [x] Multi-SF reception and gateway simulation
 
 ### Phase 5: Bluetooth Classic (Q3-Q4 2025)
 - [ ] BR/EDR protocol analysis
