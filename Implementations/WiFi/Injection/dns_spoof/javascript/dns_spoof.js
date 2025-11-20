@@ -1,0 +1,2 @@
+// WiFi Dns Spoof - JavaScript Implementation
+// TODO: Implement with Node.js and appropriate libraries

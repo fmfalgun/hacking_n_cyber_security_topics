@@ -1,0 +1,231 @@
+version: '3.8'
+
+# ============================================================================
+# Wireless Protocol Security Research - Docker Compose Configuration
+# ============================================================================
+# This compose file provides containerized environments for all 4 wireless
+# protocols: WiFi, BLE, Zigbee, and LoRa.
+#
+# Usage:
+#   # Start all services
+#   docker-compose up -d
+#
+#   # Start specific protocol
+#   docker-compose up wifi
+#   docker-compose up ble
+#   docker-compose up zigbee
+#   docker-compose up lora
+#
+#   # Access container shell
+#   docker-compose exec wifi bash
+#
+#   # View logs
+#   docker-compose logs -f wifi
+#
+#   # Stop all
+#   docker-compose down
+# ============================================================================
+
+services:
+  # --------------------------------------------------------------------------
+  # WiFi Attack Platform
+  # --------------------------------------------------------------------------
+  wifi:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/wifi/Dockerfile
+    container_name: wsr-wifi
+    hostname: wifi-research
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./Implementations/WiFi:/workspace/wifi
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure:/workspace/infrastructure
+      - /dev/bus/usb:/dev/bus/usb  # USB hardware access
+    devices:
+      - /dev/net/tun  # TUN/TAP for virtual interfaces
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - PROTOCOL=WiFi
+      - CAPTURE_DIR=/workspace/datasets/wifi
+      - LOG_LEVEL=INFO
+    working_dir: /workspace/wifi
+    command: /bin/bash
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # BLE Attack Platform
+  # --------------------------------------------------------------------------
+  ble:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/ble/Dockerfile
+    container_name: wsr-ble
+    hostname: ble-research
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./Implementations/BLE:/workspace/ble
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure:/workspace/infrastructure
+      - /dev/bus/usb:/dev/bus/usb
+      - /var/run/dbus:/var/run/dbus  # D-Bus for BlueZ
+    devices:
+      - /dev/ttyACM0  # nRF52840 dongles
+      - /dev/ttyACM1
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - PROTOCOL=BLE
+      - CAPTURE_DIR=/workspace/datasets/ble
+      - LOG_LEVEL=INFO
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
+    working_dir: /workspace/ble
+    command: /bin/bash
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # Zigbee Attack Platform
+  # --------------------------------------------------------------------------
+  zigbee:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/zigbee/Dockerfile
+    container_name: wsr-zigbee
+    hostname: zigbee-research
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./Implementations/Zigbee:/workspace/zigbee
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure:/workspace/infrastructure
+      - /dev/bus/usb:/dev/bus/usb
+    devices:
+      - /dev/ttyUSB0  # KillerBee hardware (ATUSB, Apimote, etc.)
+      - /dev/ttyUSB1
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - PROTOCOL=Zigbee
+      - CAPTURE_DIR=/workspace/datasets/zigbee
+      - LOG_LEVEL=INFO
+    working_dir: /workspace/zigbee
+    command: /bin/bash
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # LoRa Attack Platform
+  # --------------------------------------------------------------------------
+  lora:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/lora/Dockerfile
+    container_name: wsr-lora
+    hostname: lora-research
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./Implementations/LoRa:/workspace/lora
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure:/workspace/infrastructure
+      - /dev/bus/usb:/dev/bus/usb
+    devices:
+      - /dev/ttyUSB0  # LoRa modules (ESP32, SX1276)
+      - /dev/ttyACM0
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - PROTOCOL=LoRa
+      - CAPTURE_DIR=/workspace/datasets/lora
+      - LOG_LEVEL=INFO
+    working_dir: /workspace/lora
+    command: /bin/bash
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # All-in-One Research Platform
+  # --------------------------------------------------------------------------
+  all-in-one:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/all-in-one/Dockerfile
+    container_name: wsr-all-in-one
+    hostname: wireless-research
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./Implementations:/workspace/implementations
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure:/workspace/infrastructure
+      - /dev/bus/usb:/dev/bus/usb
+      - /var/run/dbus:/var/run/dbus
+    devices:
+      - /dev/net/tun
+      - /dev/ttyACM0
+      - /dev/ttyACM1
+      - /dev/ttyUSB0
+      - /dev/ttyUSB1
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    environment:
+      - CAPTURE_DIR=/workspace/datasets
+      - LOG_LEVEL=INFO
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
+    working_dir: /workspace
+    command: /bin/bash
+    restart: unless-stopped
+    ports:
+      - "8888:8888"  # Jupyter notebook
+      - "6006:6006"  # TensorBoard
+
+  # --------------------------------------------------------------------------
+  # ML Training Platform
+  # --------------------------------------------------------------------------
+  ml-training:
+    build:
+      context: .
+      dockerfile: Infrastructure/Docker/ml-training/Dockerfile
+    container_name: wsr-ml-training
+    hostname: ml-training
+    volumes:
+      - ./Datasets:/workspace/datasets
+      - ./Infrastructure/DatasetPipeline:/workspace/pipeline
+      - ./Models:/workspace/models
+    environment:
+      - DATASET_DIR=/workspace/datasets
+      - MODEL_DIR=/workspace/models
+      - LOG_LEVEL=INFO
+    working_dir: /workspace
+    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser
+    restart: unless-stopped
+    ports:
+      - "8889:8888"  # Jupyter Lab
+      - "6007:6006"  # TensorBoard
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]  # If NVIDIA GPU available
+
+# Networks (using host mode for raw socket access)
+networks:
+  default:
+    name: wsr-network
+    driver: bridge
+
+# Volumes for persistent data
+volumes:
+  datasets:
+    driver: local
+  models:
+    driver: local

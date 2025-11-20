@@ -33,7 +33,7 @@ parent: "[[README]]"
 Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Energy (BLE)**.
 
 #### A. Bluetooth Low Energy (BLE)
-**Status**: ✅ Active Research | **Progress**: DoS Implementation Phase
+**Status**: ✅ Active Research | **Progress**: Implementation in Progress
 
 **Core Documentation**:
 - [[Bluetooth/BLE/README|BLE Home & Overview]]
@@ -49,7 +49,7 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 **Implementation**: [[Bluetooth/BLE/Scripting/README|Scripting]] • [[Bluetooth/BLE/Scripting/01-packet-crafting-basics|Packet Crafting (Python & C++)]]
 
 #### B. Bluetooth Classic (BR/EDR)
-**Status**: 📋 Planned | **Progress**: After WiFi
+**Status**: 📋 Planned
 
 **Planned Coverage**:
 - [[Bluetooth/Classic/README|Bluetooth Classic Overview]]
@@ -62,7 +62,7 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 ---
 
 ### 2. WiFi (802.11)
-**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
+**Status**: 📋 Protocol Overview Complete, Implementation Planned
 
 [[WiFi/README|→ WiFi Research Hub]]
 
@@ -81,7 +81,7 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 ---
 
 ### 3. Zigbee (IEEE 802.15.4)
-**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
+**Status**: 📋 Protocol Overview Complete, Implementation Planned
 
 [[Zigbee/README|→ Zigbee Research Hub]]
 
@@ -99,7 +99,7 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 ---
 
 ### 4. LoRa/LoRaWAN
-**Status**: ✅ Complete | **Progress**: Comprehensive Documentation
+**Status**: 📋 Protocol Overview Complete, Implementation Planned
 
 [[LoRa/README|→ LoRa Research Hub]]
 
@@ -119,7 +119,7 @@ Comprehensive research on **Bluetooth Classic (BR/EDR)** and **Bluetooth Low Ene
 ## 🛠️ Infrastructure & Tooling
 
 ### Lab Setup
-**Status**: 📋 Planned
+**Status**: 🔄 In Progress
 
 - [[Lab-Setup/README|Lab Setup Overview]]
 - Hardware shopping list (Ubertooth, HackRF, nRF52840, ESP32)
